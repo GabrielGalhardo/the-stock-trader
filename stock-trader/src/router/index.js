@@ -3,7 +3,7 @@ import Router from 'vue-router'
 
 import Home from '../components/Home'
 import Portfolio from '../components/portfolio/Portfolio'
-import Stocks from '../components/stocks/Stocks'
+import Acoes from '../components/stocks/Acoes.vue'
 
 Vue.use(Router)
 
@@ -12,7 +12,7 @@ const router = new Router({
     routes: [
         { path: '/', component: Home },
         { path: '/portfolio', component: Portfolio },
-        { path: '/stocks', component: Stocks },
+        { path: '/acoes', component: Acoes },
     ]
 })
 

@@ -1,5 +1,5 @@
 <template>
-    <h1>Stoks</h1>
+    <h1>Açoes</h1>
 </template>
 <script>
 
