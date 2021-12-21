@@ -2,16 +2,13 @@
   <v-flex class="pr-3 pb-3" xs12 md6 lg4>
     <v-card class="blue darken-3 white--text">
       <v-card-title class="headline">
-        <strong
-          >
+        <strong>
           {{ stock.name }}
-          
-          <small> - Preço: R${{ stock.price }} | Qtde: {{ stock.quantity }}
 
+          <small>
+            - Preço: R${{ stock.price }} | Qtde: {{ stock.quantity }}
           </small>
-          
-          </strong
-        >
+        </strong>
       </v-card-title>
     </v-card>
     <v-card>
@@ -25,7 +22,7 @@
         <v-btn
           class="blue darken-3 white--text"
           @click="sellStock"
-          :disabled="quantity <= 0 || !Number.isInteger(quantity)"
+          :disabled="quantity <= 0 || !Number.isInteger(quantity) || quantity> stock.quantity"
           >Vender</v-btn
         >
       </v-container>
@@ -49,7 +46,7 @@ export default {
         quantity: this.quantity,
       };
       // eslint-disable-next-line
-      this.$store.dispatch('sellStock', order)
+      this.$store.dispatch("sellStock", order);
       this.quantity = 0;
     },
   },
