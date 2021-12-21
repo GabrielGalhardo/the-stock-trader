@@ -10,12 +10,10 @@ export default {
         }
     },
     actions: {
-        // buyStock({ commit }, order){
-        //     commit()
-        // },
+        buyStock({ commit }, order){
+            commit('buyStock', order)
+        },
         initStocks({ commit }){
-            // eslint-disable-next-line
-            console.log('initStocks...')
             commit('setStocks', stocks)
         }
     },
